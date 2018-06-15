@@ -38,3 +38,23 @@ Documentation for the current release of xlnt is available [here](https://tfusse
 
 ## License
 xlnt is released to the public for free under the terms of the MIT License. See [LICENSE.md](https://github.com/tfussell/xlnt/blob/master/LICENSE.md) for the full text of the license and the licenses of xlnt's third-party dependencies. [LICENSE.md](https://github.com/tfussell/xlnt/blob/master/LICENSE.md) should be distributed alongside any assemblies that use xlnt in source or compiled form.
+
+
+
+## Fork
+
+This respository is fork from https://github.com/tfussell/xlnt
+
+"menglei" is my working dictionary
+
+I build this respository by CMake Mingw and Code::blocks, it's quite simple and easy
+
+After build all, there would be a `libxlnt.dll` in `build/source/`, copy it to menglei/ for run your exe program
+
+Set Code::Blocks 
+	- Build -> Select target   
+	- select menglei
+	- build and run
+
+
+For more infomation, see `menglei/README.md`
