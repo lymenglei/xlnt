@@ -38,3 +38,5 @@ if(PYTHON)
 endif()
 
 add_subdirectory(source)
+
+add_subdirectory(menglei)
