@@ -1,4 +1,5 @@
 build/
+build5/
 docs/build/
 docs/doxyxml/
 node_modules/
@@ -17,3 +18,4 @@ Win32/
 python/record.txt
 python/xlntpyarrow.egg-info/
 /x64/
+$Recycle.Bin/

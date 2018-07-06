@@ -47,12 +47,13 @@ This respository is fork from https://github.com/tfussell/xlnt
 
 "menglei" is my working dictionary
 
-I build this respository by CMake Mingw and Code::blocks, it's quite simple and easy
+I build this respository by CMake Mingw and Code::Blocks, it's quite simple and easy
 
 After build all, there would be a `libxlnt.dll` in `build/source/`, copy it to menglei/ for run your exe program
 
-Set Code::Blocks 
-	- Build -> Select target   
+Set Code::Blocks
+
+	- Build -> Select target
 	- select menglei
 	- build and run
 

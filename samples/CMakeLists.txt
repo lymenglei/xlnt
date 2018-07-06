@@ -14,7 +14,7 @@ if(STATIC_CRT)
   include(${CMAKE_CURRENT_SOURCE_DIR}/../cmake/ucm.cmake)
   ucm_set_runtime(STATIC)
 endif()
-
+ 
 set(XLNT_SAMPLE_DATA_DIR ${CMAKE_CURRENT_SOURCE_DIR}/data)
 
 file(GLOB SAMPLE_SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/*.cpp)
