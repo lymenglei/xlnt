@@ -41,7 +41,7 @@ xlnt is released to the public for free under the terms of the MIT License. See 
 
 
 
-## Fork
+## == Fork ==
 
 This respository is fork from https://github.com/tfussell/xlnt
 
@@ -59,3 +59,5 @@ Set Code::Blocks
 
 
 For more infomation, see `menglei/README.md`
+
+2018.9.29 add bin/ 
