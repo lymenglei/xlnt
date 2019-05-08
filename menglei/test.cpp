@@ -39,15 +39,17 @@ int func_return_table(lua_State *L)
 // 正式接口
 int readExcel(lua_State *L)
 {
+    double sheet = luaL_checknumber(L, 1);
     size_t length ;
-    const char *s = luaL_checklstring(L, 1, &length);
+    const char *s = luaL_checklstring(L, 2, &length);
 
     std::string fileName = s;
     menglei::singleExcel excel;
     excel.loadExcel(fileName);
-    xlnt::worksheet ws = excel.getSheetByIndex(0);
+    xlnt::worksheet ws = excel.getSheetByIndex(int(sheet)); // TODO 0
+    std::string sheetTitle = excel.getSheetTitle();
 
-    int i = 1, j = 1;
+    int i = 0, j = 0;
     lua_newtable(L);
     for (auto row : ws.rows(false))
     {
@@ -65,6 +67,12 @@ int readExcel(lua_State *L)
         i++;
         lua_settable(L, -3);
     }
+
+    // 把页签的名字传递到lua去 不过会有乱码的问题
+    lua_pushstring(L, "sheetName");
+    lua_pushstring(L, sheetTitle.c_str());
+    lua_settable(L, -3);
+
     // TODO
     return 1;
 }
@@ -115,7 +123,8 @@ int main()
 {
     testWrapper();
     // TODO write your codes here
-    std::cout << "Hello world!" << std::endl;
+    std::cout << "Press enter to continue..." << std::endl;
+    getchar();
     //getwchar();
     return 0;
 }
